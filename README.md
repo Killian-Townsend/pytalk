@@ -12,7 +12,7 @@ original repo removed and broken, this fixes some bugs
 ### Install
 Install through npm
 ```bash
-npm install pytalk
+npm install https://github.com/Killian-Townsned/pytalk
 ```
 
 ### Usage
