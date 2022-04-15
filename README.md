@@ -1,13 +1,13 @@
 pytalk.js
 ========================
-[![Build Status](https://travis-ci.org/tsim0/pytalk.js.svg?branch=master)](https://travis-ci.org/tsim0/pytalk.js)
 
 Pytalk is a module for bidirectional communication between Node and Python.
 
 It lets you create Python process, and communicate with it via standard streams. Every message passed through pytalk gets serialized into JSON.
 Before starting the process, Pytalk modifies the Python code, instantiating an event loop and allowing you to send and recieve messages with `pytalk_emit`, `pytalk_on` or registering Python method with `pytalk_method`.
 
-original repo removed and broken, this fixes some bugs
+Originaly created by [tsim0](https://github.com/tsim0), but repo has been removed
+Originaly written for Python2.x, but is being rewritten to work on Python3.9
 
 ### Install
 Install through npm
