@@ -57,7 +57,7 @@ Note that __objects proxied by PyObjects don't get garbage collected by Python__
 
 ### Documentation
 
-#####```new Worker([scriptPath], [options])```
+##### ```new Worker([scriptPath], [options])```
 or, which is the same `pytalk.worker(scriptPath, options)`
 
 ###### `scriptPath`
@@ -69,25 +69,25 @@ or, which is the same `pytalk.worker(scriptPath, options)`
 * `stderr` - callback called on Python's raised errors. Default is `console.log`.
 * `async` - If true, PyObject's methods become async. Default is `false`. ([example](https://github.com/tsim0/pytalk.js/blob/master/test/test.js#L285))
 
-#####```Worker.method(methodName)```
+##### ```Worker.method(methodName)```
 Returns a `function(arg1, ..., argN, callback)`. `args` are the args passed to the Python method, registered using ```@pytalk_method(methodName)``` decorator. `callback` is a error-first function, called when Python method finishes its work. Use this when you need async version of some sync Python function. 
 
-#####```Worker.methodSync(methodName)```
+##### ```Worker.methodSync(methodName)```
 Same thing as `Worker.method`, except it waits until Python method gets its work done, and returns whatever Python function returns. Uses [deasync](https://github.com/abbr/deasync) under the hood.
-
-#####```Worker.on(eventName, callback)```
+ 
+##### ```Worker.on(eventName, callback)```
 Registers event handler for `eventName`. `callback` gets triggered with `(err, args)` passed every time `pytalk_emit(eventName, args)` is called in Python code.
 
-#####```Worker.emit(eventName, ...args)```
+##### ```Worker.emit(eventName, ...args)```
 Calls Python function, registered with `@pytalk_on(eventName)` decorator, or through `pytalk_on(eventName, callback)`
 
-#####```Worker.close()```
+##### ```Worker.close()```
 Sends exitSignal to Python's event loop. Worker closes as soon as it finishes its current job.
 
-#####```Worker.unrefAll()```
+##### ```Worker.unrefAll()```
 Removes all references to Python objects, proxied by JavaScript objects. This allows Python GC to free resources if it needs to.
 
-#####```Worker.import(moduleName)```
+##### ```Worker.import(moduleName)```
 Imports moduleName in Python, and returns a proxy PyObject.
 
 ### License
