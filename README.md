@@ -7,7 +7,7 @@ It lets you create Python process, and communicate with it via standard streams.
 Before starting the process, Pytalk modifies the Python code, instantiating an event loop and allowing you to send and recieve messages with `pytalk_emit`, `pytalk_on` or registering Python method with `pytalk_method`.
 
 Originaly created by [tsim0](https://github.com/tsim0), but repo has been remove<br>
-Originaly written for Python2.x, but is being rewritten to work on Python3.9
+Originaly written for Python2.x, but is rewritten to work on Python3.9
 
 ### Install
 Install through npm
